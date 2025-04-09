@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Rock-Paper_scissor
+        </title>
+        <link rel="stylesheet" href="Advance Functions-RPS.css">
+
+        <script src="Advance Funtion-RPS.js"></script>
+    </head>
+    <body>
+        <h1 class="game-title">
+            Rock Paper Scissor
+        </h1>
+
+        <button class="hand-buttton rockBtn">
+            <image src="RPS holder/rock-emoji.png" class="hand-img"></image>
+       </button>
+
+        <button onclick="
+           playGame('Paper')"  class="hand-buttton">
+            <image src="RPS holder/paper-emoji.png" class="hand-img"></image>
+        </button>
+        <button onclick="
+        playGame('Scissor')" class="hand-buttton">
+           <image src="RPS holder/scissor-emoji.png" class="hand-img"></image>
+        </button>
+
+        <h2 class="gameResult"></h2>
+
+        <p class="playersHandPlayed handsPlayed"></p>
+
+        <p class="resultScores">
+            Wins: , Losses: , Draws:
+        </p>
+
+        <button class="reset-button" onclick="
+            scores.wins = 0;
+            scores.losses = 0;
+            scores.draws = 0;
+            localStorage.removeItem('scores');
+            displayResultData();
+        ">Reset Scores</button>
+
+        <button class="autoBtn reset-button">
+            Autoplay
+        </button>
+        
+    </body>
+</html>
